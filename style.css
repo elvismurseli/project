@@ -6,6 +6,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body:has(#cart) {
+    background-color: #fffded;
+}
 
 /* ===== GLOBAL - START ===== */
 :root {
@@ -32,6 +40,9 @@
 }
 .btn:active {
     transform: scale(.95);
+}
+.btn.btn-disabled {
+    background-color: grey;
 }
 h1, h2, .logo {
     font-family: 'Lobster', sans-serif;
@@ -70,19 +81,22 @@ nav.scroll-nav {
     background-color: rgb(234, 233, 230);
     box-shadow: .02rem .05rem .3rem rgba(0, 0, 0, .3);
 }
+nav.scroll-nav .logo {
+    color: var(--secondary-color);
+}
 /* ===== NAV - END ======= */
 
 /* ===== HEADER - START ===== */
 header {
-	background: linear-gradient(to right, rgb(234, 233, 230, 0), rgb(234, 233, 230, .2)), url('/images/header-bcg.webp');
+	background: linear-gradient(to right, rgb(234, 233, 230, 0), rgb(234, 233, 230, .2)), url('images/header-bcg.jpg');
     background-color: rgb(234, 233, 230);
+	background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
 	text-align: center;
 	width: 100%;
     padding: 0 .5rem;
 	min-height: 70vh;
-	background-size: cover;
-    background-repeat: no-repeat;
-	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
@@ -93,7 +107,7 @@ header {
 }
 .header-inner {
     background-color: rgba(0, 0, 0, .5);
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: .5rem;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
 }
@@ -102,6 +116,9 @@ header {
 }
 .header-inner h1, .header-inner p {
     color: var(--primary-color);
+}
+.header-inner .btn {
+    opacity: 1;
 }
 /* ===== HEADER - END ======= */
 
@@ -125,6 +142,7 @@ header {
     box-shadow: .02rem .05rem .3rem rgba(0, 0, 0, .3);
     padding-bottom: .5rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 .product-card h1, .product-card h4 {
     padding-left: .5rem;
@@ -193,3 +211,45 @@ header {
     cursor: pointer;
 }
 /* ===== MODAL - END ========= */
+
+/* ===== FOOTER - START ========= */
+#contact {
+    min-height: 250px;
+    padding: 2rem;
+    background-color: rgb(234, 233, 230);
+}
+#contact > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#contact .logo {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+#contact > hr {
+    margin: 1rem 0;
+}
+/* ===== FOOTER - END ========= */
+
+
+/* ===== CART - START ======== */
+#cart {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+#cart table {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#cart table th,
+#cart table td {
+    padding: .5rem;
+    text-align: center;
+}
+#cart table tr td:last-child {
+    text-align: left;
+}
+/* ===== CART - END ======== */

@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="app.js" defer></script>
-    <title>School Project</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="cart.js" defer></script>
+    <title>Cart</title>
 </head>
 <body>
     <nav>
         <a href="/" class="logo">STB</a>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="cart/cart.html#cart">Cart</a>
+            <a href="/">Home</a>
+            <a href="../index.html#products">Products</a>
+            <a href="#cart">Cart</a>
             <a href="#contact" class="btn contact-btn">Contact</a>
         </div>
     </nav>
-    <header>
-        <div class="header-inner">
-            <h1>Simply The Best</h1>
-            <p>There are three responses to a product - yes, no, and WOW! Wow is the one to aim for.</p>
-            <a href="#products" class="btn">EXPLORE</a>
-        </div>
-    </header>
-    <section id="products">
-        <h2>Products</h2>
-        <div class="products-wrapper"></div>
+    <section id="cart">
+        <h2 style="font-size: 72px; text-align: center; margin-bottom: 2rem;">Cart</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bro</td>
+                    <td>100</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat autem quo temporibus dolorum a, ad quae dolorem beatae nobis quam nesciunt deserunt sapiente dolor ullam.</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <footer id="contact">
         <div>
-            <a href="#" class="logo">STB</a>
+            <a href="/" class="logo">STB</a>
             <div class="contact-info">
                 <div class="form-group">
                     <i class="fas fa-phone"></i>
@@ -51,7 +60,5 @@
         <hr>
         <p>	&copy; 2023 stb.com</p>
     </footer>
-
-    <div class="modal"></div>
 </body>
 </html>
